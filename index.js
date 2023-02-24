@@ -2,8 +2,86 @@ const express = require("express");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.status(400);
+app.get("/400", (req, res) => {
+  res.status(400).send("/Bad Request");
+});
+app.get("/401", (req, res) => {
+  res.status(401).send("/Unauthorized");
+});
+app.get("/402", (req, res) => {
+  res.status(402).send("/Payment Required");
+});
+app.get("/403", (req, res) => {
+  res.status(403).send("/Forbidden");
+});
+app.get("/404", (req, res) => {
+  res.status(404).send("/Not Found");
+});
+app.get("/405", (req, res) => {
+  res.status(405).send("/Method Not Allowed ");
+});
+app.get("/406", (req, res) => {
+  res.status(406).send("/Not Acceptable");
+});
+app.get("/407", (req, res) => {
+  res.status(407).send("/Proxy Authentication Required ");
+});
+app.get("/408", (req, res) => {
+  res.status(408).send("/Request Timeout");
+});
+app.get("/409", (req, res) => {
+  res.status(409).send("/Conflict");
+});
+app.get("/410", (req, res) => {
+  res.status(410).send("/Gone");
+});
+app.get("/411", (req, res) => {
+  res.status(411).send("/Length Required");
+});
+app.get("/412", (req, res) => {
+  res.status(412).send("/Precondition Failed");
+});
+app.get("/413", (req, res) => {
+  res.status(413).send("/Content Too Large ");
+});
+app.get("/414", (req, res) => {
+  res.status(414).send("/URI Too Long ");
+});
+app.get("/415", (req, res) => {
+  res.status(415).send("/Unsupported Media Type ");
+});
+app.get("/416", (req, res) => {
+  res.status(416).send("/Range Not Satisfiable ");
+});
+app.get("/417", (req, res) => {
+  res.status(417).send("/Expectation Failed");
+});
+app.get("/418", (req, res) => {
+  res.status(418).send("/I'm a teapot ");
+});
+app.get("/421", (req, res) => {
+  res.status(421).send("/Misdirected Request");
+});
+app.get("/422", (req, res) => {
+  res.status(422).send("/Unprocessable Entity");
+});
+app.get("/423", (req, res) => {
+  res.status(423).send("/Locked");
+});
+app.get("/424", (req, res) => {
+  res.status(424).send("/Failed Dependency");
+});
+app.get("/425", (req, res) => {
+  res.status(425).send("/Too Early");
+});
+app.get("/426", (req, res) => {
+  res.status(426).send("/Upgrade Required");
+});
+app.get("/428", (req, res) => {
+  res.status(428).send("/Precondition Required");
+});
+app.get("/429", (req, res) => {
+  res.status(429).send("/Too Many Requests ");
 });
 
 app.listen(5000, () => {
