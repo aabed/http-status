@@ -2,6 +2,10 @@ const express = require("express");
 
 const app = express();
 
+app.get("/redirected", (req, res) => {
+  res.status(200).send("You have been redirected");
+});
+
 //200s
 
 app.get("/200", (req, res) => {
@@ -34,6 +38,14 @@ app.get("/208", (req, res) => {
 app.get("/226", (req, res) => {
   res.status(226).send("IM Used");
 });
+
+
+//300s
+
+app.get("301", (req,res) => {
+  res.redirect(301, '/redirected');
+});
+
 
 //400s
 app.get("/400", (req, res) => {
