@@ -42,7 +42,7 @@ app.get("/226", (req, res) => {
 
 //300s
 
-app.get("301", (req,res) => {
+app.get("/301", (req,res) => {
   res.redirect(301, '/redirected');
 });
 
